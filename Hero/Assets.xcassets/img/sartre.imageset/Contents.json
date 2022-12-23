@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "sartre.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
