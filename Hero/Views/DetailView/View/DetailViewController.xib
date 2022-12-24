@@ -33,7 +33,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gk-vC-3U3">
                                     <rect key="frame" x="0.0" y="0.0" width="350" height="250"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="socrates" translatesAutoresizingMaskIntoConstraints="NO" id="bMu-f2-ReM">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bMu-f2-ReM">
                                             <rect key="frame" x="75" y="5" width="200" height="240"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="200" id="bi9-yA-ScR"/>
@@ -137,7 +137,6 @@
         </view>
     </objects>
     <resources>
-        <image name="socrates" width="340" height="290"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
