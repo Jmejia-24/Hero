@@ -16,7 +16,7 @@ final class MainListCoordinator<R: AppRouter> {
     }
     
     private lazy var primaryViewController: UIViewController = {
-        let viewModel = MainListViewModel<R>()
+        let viewModel = MainListViewModel<R>(services: Services(storage: PhilosopherManager()))
         viewModel.router = router
         let viewController = MainListViewController(viewModel: viewModel)
         return viewController

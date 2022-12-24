@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C801F4F02957644300224647 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C801F4EF2957644300224647 /* UIAlertController.swift */; };
+		C801F4F229576A8E00224647 /* PhilosopherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C801F4F129576A8E00224647 /* PhilosopherObject.swift */; };
+		C801F4F429576C1000224647 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = C801F4F329576C1000224647 /* Services.swift */; };
 		C81DED1729564ACD0076E4F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED1629564ACD0076E4F1 /* AppDelegate.swift */; };
 		C81DED1B29564ACD0076E4F1 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED1A29564ACD0076E4F1 /* MainListViewController.swift */; };
 		C81DED2029564ACE0076E4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81DED1F29564ACE0076E4F1 /* Assets.xcassets */; };
@@ -32,9 +35,24 @@
 		C81DED7029567CBD0076E4F1 /* AddNewPhilosopherCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED6F29567CBD0076E4F1 /* AddNewPhilosopherCoordinator.swift */; };
 		C81DED7329567CE00076E4F1 /* AddNewPhilosopherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED7129567CE00076E4F1 /* AddNewPhilosopherViewController.swift */; };
 		C81DED7429567CE00076E4F1 /* AddNewPhilosopherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C81DED7229567CE00076E4F1 /* AddNewPhilosopherViewController.xib */; };
+		C81DED7729569FA70076E4F1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED7629569FA70076E4F1 /* CoreDataStack.swift */; };
+		C81DED7B2956A3550076E4F1 /* PhilosopherDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C81DED792956A3550076E4F1 /* PhilosopherDB.xcdatamodeld */; };
+		C81DED7D2956C5200076E4F1 /* PhilosopherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED7C2956C5200076E4F1 /* PhilosopherManager.swift */; };
+		C81DEDA02956F03E0076E4F1 /* marx.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C81DED972956F03E0076E4F1 /* marx.jpeg */; };
+		C81DEDA12956F03E0076E4F1 /* sartre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C81DED982956F03E0076E4F1 /* sartre.jpg */; };
+		C81DEDA22956F03E0076E4F1 /* kant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C81DED992956F03E0076E4F1 /* kant.jpg */; };
+		C81DEDA32956F03E0076E4F1 /* hegel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C81DED9A2956F03E0076E4F1 /* hegel.jpg */; };
+		C81DEDA42956F03E0076E4F1 /* platon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C81DED9B2956F03E0076E4F1 /* platon.jpg */; };
+		C81DEDA52956F03E0076E4F1 /* descartes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C81DED9C2956F03E0076E4F1 /* descartes.jpg */; };
+		C81DEDA62956F03E0076E4F1 /* socrates.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C81DED9D2956F03E0076E4F1 /* socrates.jpg */; };
+		C81DEDA72956F03E0076E4F1 /* aristoteles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C81DED9E2956F03E0076E4F1 /* aristoteles.jpg */; };
+		C81DEDA82956F03E0076E4F1 /* nietzche.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C81DED9F2956F03E0076E4F1 /* nietzche.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C801F4EF2957644300224647 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		C801F4F129576A8E00224647 /* PhilosopherObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilosopherObject.swift; sourceTree = "<group>"; };
+		C801F4F329576C1000224647 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		C81DED1329564ACD0076E4F1 /* Hero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81DED1629564ACD0076E4F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C81DED1A29564ACD0076E4F1 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +80,18 @@
 		C81DED6F29567CBD0076E4F1 /* AddNewPhilosopherCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPhilosopherCoordinator.swift; sourceTree = "<group>"; };
 		C81DED7129567CE00076E4F1 /* AddNewPhilosopherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPhilosopherViewController.swift; sourceTree = "<group>"; };
 		C81DED7229567CE00076E4F1 /* AddNewPhilosopherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewPhilosopherViewController.xib; sourceTree = "<group>"; };
+		C81DED7629569FA70076E4F1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		C81DED7A2956A3550076E4F1 /* PhilosopherDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhilosopherDB.xcdatamodel; sourceTree = "<group>"; };
+		C81DED7C2956C5200076E4F1 /* PhilosopherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilosopherManager.swift; sourceTree = "<group>"; };
+		C81DED972956F03E0076E4F1 /* marx.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marx.jpeg; sourceTree = "<group>"; };
+		C81DED982956F03E0076E4F1 /* sartre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sartre.jpg; sourceTree = "<group>"; };
+		C81DED992956F03E0076E4F1 /* kant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kant.jpg; sourceTree = "<group>"; };
+		C81DED9A2956F03E0076E4F1 /* hegel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hegel.jpg; sourceTree = "<group>"; };
+		C81DED9B2956F03E0076E4F1 /* platon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = platon.jpg; sourceTree = "<group>"; };
+		C81DED9C2956F03E0076E4F1 /* descartes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = descartes.jpg; sourceTree = "<group>"; };
+		C81DED9D2956F03E0076E4F1 /* socrates.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = socrates.jpg; sourceTree = "<group>"; };
+		C81DED9E2956F03E0076E4F1 /* aristoteles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aristoteles.jpg; sourceTree = "<group>"; };
+		C81DED9F2956F03E0076E4F1 /* nietzche.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nietzche.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +124,10 @@
 		C81DED1529564ACD0076E4F1 /* Hero */ = {
 			isa = PBXGroup;
 			children = (
-				C81DED4F29565C550076E4F1 /* Helpers */,
+				C81DED952956EFD80076E4F1 /* assets */,
 				C81DED40295652F50076E4F1 /* API */,
+				C81DED7829569FEC0076E4F1 /* CoreData */,
+				C81DED4F29565C550076E4F1 /* Helpers */,
 				C81DED3929564FE40076E4F1 /* Protocols */,
 				C81DED3829564FD90076E4F1 /* Views */,
 				C81DED1629564ACD0076E4F1 /* AppDelegate.swift */,
@@ -141,6 +173,7 @@
 			children = (
 				C81DED2E29564F460076E4F1 /* Response.swift */,
 				C81DED3029564F500076E4F1 /* Philosopher.swift */,
+				C801F4F129576A8E00224647 /* PhilosopherObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				C81DED5129565C760076E4F1 /* UICollectionView+ReusableView.swift */,
+				C801F4EF2957644300224647 /* UIAlertController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -250,6 +284,41 @@
 				C81DED7229567CE00076E4F1 /* AddNewPhilosopherViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C81DED7829569FEC0076E4F1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C801F4F329576C1000224647 /* Services.swift */,
+				C81DED7C2956C5200076E4F1 /* PhilosopherManager.swift */,
+				C81DED7629569FA70076E4F1 /* CoreDataStack.swift */,
+				C81DED792956A3550076E4F1 /* PhilosopherDB.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C81DED952956EFD80076E4F1 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				C81DED962956EFF00076E4F1 /* img */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		C81DED962956EFF00076E4F1 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				C81DED9E2956F03E0076E4F1 /* aristoteles.jpg */,
+				C81DED9C2956F03E0076E4F1 /* descartes.jpg */,
+				C81DED9A2956F03E0076E4F1 /* hegel.jpg */,
+				C81DED992956F03E0076E4F1 /* kant.jpg */,
+				C81DED972956F03E0076E4F1 /* marx.jpeg */,
+				C81DED9F2956F03E0076E4F1 /* nietzche.jpg */,
+				C81DED9B2956F03E0076E4F1 /* platon.jpg */,
+				C81DED982956F03E0076E4F1 /* sartre.jpg */,
+				C81DED9D2956F03E0076E4F1 /* socrates.jpg */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,11 +383,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C81DEDA12956F03E0076E4F1 /* sartre.jpg in Resources */,
+				C81DEDA82956F03E0076E4F1 /* nietzche.jpg in Resources */,
+				C81DEDA52956F03E0076E4F1 /* descartes.jpg in Resources */,
+				C81DEDA42956F03E0076E4F1 /* platon.jpg in Resources */,
+				C81DEDA32956F03E0076E4F1 /* hegel.jpg in Resources */,
 				C81DED2329564ACE0076E4F1 /* LaunchScreen.storyboard in Resources */,
 				C81DED2029564ACE0076E4F1 /* Assets.xcassets in Resources */,
+				C81DEDA72956F03E0076E4F1 /* aristoteles.jpg in Resources */,
 				C81DED4E29565A850076E4F1 /* MainListCollectionViewCell.xib in Resources */,
+				C81DEDA02956F03E0076E4F1 /* marx.jpeg in Resources */,
+				C81DEDA22956F03E0076E4F1 /* kant.jpg in Resources */,
 				C81DED7429567CE00076E4F1 /* AddNewPhilosopherViewController.xib in Resources */,
 				C81DED65295669C70076E4F1 /* DetailViewController.xib in Resources */,
+				C81DEDA62956F03E0076E4F1 /* socrates.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,9 +407,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C81DED7729569FA70076E4F1 /* CoreDataStack.swift in Sources */,
 				C81DED6E29567CAC0076E4F1 /* AddNewPhilosopherViewModel.swift in Sources */,
 				C81DED3B29564FF90076E4F1 /* Router.swift in Sources */,
+				C801F4F229576A8E00224647 /* PhilosopherObject.swift in Sources */,
 				C81DED1B29564ACD0076E4F1 /* MainListViewController.swift in Sources */,
+				C801F4F02957644300224647 /* UIAlertController.swift in Sources */,
 				C81DED2F29564F460076E4F1 /* Response.swift in Sources */,
 				C81DED3129564F500076E4F1 /* Philosopher.swift in Sources */,
 				C81DED44295654E00076E4F1 /* Failure.swift in Sources */,
@@ -339,12 +420,15 @@
 				C81DED5229565C760076E4F1 /* UICollectionView+ReusableView.swift in Sources */,
 				C81DED1729564ACD0076E4F1 /* AppDelegate.swift in Sources */,
 				C81DED3529564FB70076E4F1 /* AppTransition.swift in Sources */,
+				C801F4F429576C1000224647 /* Services.swift in Sources */,
 				C81DED3729564FC60076E4F1 /* App.swift in Sources */,
 				C81DED3329564F950076E4F1 /* MainListViewModel.swift in Sources */,
 				C81DED3D295650110076E4F1 /* Coordinator.swift in Sources */,
 				C81DED7029567CBD0076E4F1 /* AddNewPhilosopherCoordinator.swift in Sources */,
 				C81DED692956718B0076E4F1 /* DetailCoordinator.swift in Sources */,
+				C81DED7D2956C5200076E4F1 /* PhilosopherManager.swift in Sources */,
 				C81DED64295669C70076E4F1 /* DetailViewController.swift in Sources */,
+				C81DED7B2956A3550076E4F1 /* PhilosopherDB.xcdatamodeld in Sources */,
 				C81DED3F2956518B0076E4F1 /* MainListCoordinator.swift in Sources */,
 				C81DED4D29565A850076E4F1 /* MainListCollectionViewCell.swift in Sources */,
 				C81DED672956708A0076E4F1 /* DetailViewModel.swift in Sources */,
@@ -554,6 +638,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C81DED792956A3550076E4F1 /* PhilosopherDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C81DED7A2956A3550076E4F1 /* PhilosopherDB.xcdatamodel */,
+			);
+			currentVersion = C81DED7A2956A3550076E4F1 /* PhilosopherDB.xcdatamodel */;
+			path = PhilosopherDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C81DED0B29564ACD0076E4F1 /* Project object */;
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class MainListCollectionViewCell: UICollectionViewCell, NibLoadable {
-    
+     
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var nameLabel: UILabel!
     
@@ -19,6 +19,6 @@ class MainListCollectionViewCell: UICollectionViewCell, NibLoadable {
 
     func configCell(philosopher: Philosopher) {
         nameLabel.text = philosopher.name
-        imageView.image = UIImage(named: "aristoteles")
+        imageView.image = UIImage(named: philosopher.image ?? "")
     }
 }

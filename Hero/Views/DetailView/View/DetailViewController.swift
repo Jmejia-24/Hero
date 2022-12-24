@@ -32,6 +32,7 @@ class DetailViewController: UIViewController {
     }
     
     private func setUI() {
+        imageView.image = UIImage(named: viewModel.philosopher.image ?? "")
         nameLabel.text = viewModel.philosopher.name
         periodoLabel.text = viewModel.philosopher.period
         paisLabel.text = viewModel.philosopher.country

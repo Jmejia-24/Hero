@@ -24,6 +24,7 @@ final class MainListViewController: UICollectionViewController {
     init(viewModel: MainListViewModelRepresentable) {
         self.viewModel = viewModel
         super.init(collectionViewLayout: Self.generateLayout())
+        self.viewModel.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -53,7 +54,6 @@ final class MainListViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        bindUI()
     }
     
     override func loadView() {
@@ -78,21 +78,7 @@ final class MainListViewController: UICollectionViewController {
         collectionView.showsVerticalScrollIndicator = false
         setBarItem()
         applySnapshot(items: [])
-        viewModel.loadData()
-    }
-    
-    private func bindUI() {
-        subscription = viewModel.philosophersSubject.sink { [unowned self] completion in
-            switch completion {
-            case .finished:
-                print("Received completion in VC", completion)
-            case .failure(let error):
-                print(error.localizedDescription)
-//                presentErrorAlert(for: error.errorCode.rawValue, with: error.message)
-            }
-        } receiveValue: { [unowned self] items in
-            applySnapshot(items: items)
-        }
+        viewModel.getPhilosophers()
     }
     
     private lazy var dataSource: DataSource = {
@@ -114,5 +100,22 @@ final class MainListViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let movie = dataSource.itemIdentifier(for: indexPath) else { return }
         viewModel.didTapItem(model: movie)
+    }
+}
+
+protocol MainViewModelViewDelegate {
+    func refreshScreen(items: [Philosopher])
+    func showError(errorMessage: String)
+}
+
+extension MainListViewController: MainViewModelViewDelegate {
+    func refreshScreen(items: [Philosopher]) {
+        DispatchQueue.main.async { [unowned self] in
+            applySnapshot(items: items)
+        }
+    }
+    
+    func showError(errorMessage: String) {
+        presentAlert(with: errorMessage)
     }
 }

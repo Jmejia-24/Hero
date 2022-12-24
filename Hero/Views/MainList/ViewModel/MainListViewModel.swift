@@ -9,49 +9,55 @@ import UIKit
 import Combine
 
 protocol MainListViewModelRepresentable {
-    func loadData()
+    func getPhilosophers()
     func didTapItem(model: Philosopher)
     func goToAddNew()
-    var philosophersSubject: PassthroughSubject<[Philosopher], Failure> { get }
+    var delegate: MainViewModelViewDelegate? { get set }
 }
 
 final class MainListViewModel<R: AppRouter> {
     var router: R?
-    let philosophersSubject = PassthroughSubject<[Philosopher], Failure>()
-    
+    var delegate: MainViewModelViewDelegate?
     private var cancellables = Set<AnyCancellable>()
     private let store: MainListStore
     
-    private var fetchedPhilosophers = [Philosopher]() {
-        didSet {
-            philosophersSubject.send(fetchedPhilosophers)
-        }
-    }
+    private var fetchedPhilosophers = [Philosopher]()
     
-    init(store: MainListStore = APIManager()) {
+    var services: Serviceable
+    
+    init(store: MainListStore = APIManager(), services: Serviceable) {
         self.store = store
+        self.services = services
+        loadData()
     }
 }
 
 extension MainListViewModel: MainListViewModelRepresentable {
+    
+    func getPhilosophers() {
+        services.fetch { [unowned self] result in
+            switch result {
+            case .success(let philosopherManagedObjects):
+                let philosophers = philosopherManagedObjects.compactMap {
+                    PhilosopherObject(nsManagedObject: $0).philosopher
+                }
+                fetchedPhilosophers = philosophers
+                delegate?.refreshScreen(items: philosophers)
+            case .failure:
+                delegate?.showError(errorMessage: "Ocurrio un error al leer los datos, intentelo mas tarde")
+            }
+        }
+    }
+    
     func loadData() {
         let recievedPhilosopher = { (response: Response) -> Void in
             DispatchQueue.main.async { [unowned self] in
-                fetchedPhilosophers.append(contentsOf: response.Philosopher)
-            }
-        }
-        
-        let completion = { [unowned self] (completion: Subscribers.Completion<Failure>) -> Void in
-            switch  completion {
-            case .finished:
-                break
-            case .failure(let failure):
-                philosophersSubject.send(completion: .failure(failure))
+                services.saveDataOf(philosophers: response.Philosopher)
             }
         }
         
         store.getPhilosophers()
-            .sink(receiveCompletion: completion, receiveValue: recievedPhilosopher)
+            .sink(receiveCompletion: { _ in }, receiveValue: recievedPhilosopher)
             .store(in: &cancellables)
     }
     
