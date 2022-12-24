@@ -73,6 +73,7 @@ extension AddNewPhilosopherViewController: ImagePickerDelegate {
 
     func didSelect(image: UIImage?) {
         DispatchQueue.main.async { [unowned self] in
+            guard let image = image else { return }
             imageView.image = image
             nameImagePlaceholder = ""
         }

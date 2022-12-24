@@ -44,7 +44,7 @@ open class ImagePicker: NSObject {
         
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        if let action = self.action(for: .photoLibrary, title: "Photo library") {
+        if let action = self.action(for: .photoLibrary, title: "Fotos") {
             alertController.addAction(action)
         }
         
