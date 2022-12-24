@@ -26,3 +26,9 @@ struct Philosopher: Codable, Hashable {
         case image = "img"
     }
 }
+
+extension Philosopher: Comparable {
+    static func <(lhs: Philosopher, rhs: Philosopher) -> Bool {
+        lhs.name < rhs.name
+    }
+}

@@ -47,7 +47,7 @@ extension MainListViewModel: MainListViewModelRepresentable {
                     PhilosopherObject(nsManagedObject: $0).philosopher
                 }
                 fetchedPhilosophers = philosophers
-                delegate?.refreshScreen(items: philosophers)
+                delegate?.refreshScreen(items: philosophers.sorted())
             case .failure:
                 delegate?.showError()
             }
@@ -57,9 +57,9 @@ extension MainListViewModel: MainListViewModelRepresentable {
     func loadData() {
         let recievedPhilosopher = { (response: Response) -> Void in
             DispatchQueue.main.async { [unowned self] in
-                services.saveDataOf(philosophers: response.Philosopher)
+                services.saveDataOf(philosophers: response.philosophers)
                 if UserDefaultsManager.isFirstLaunch {
-                    delegate?.refreshScreen(items: response.Philosopher)
+                    delegate?.refreshScreen(items: response.philosophers.sorted())
                     UserDefaultsManager.isFirstLaunch = false
                 }
             }
