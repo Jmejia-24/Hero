@@ -22,9 +22,9 @@ final class MainListViewModel<R: AppRouter> {
     private var cancellables = Set<AnyCancellable>()
     private let store: MainListStore
     
-    private var fetchedPhilosopherss = [Philosopher]() {
+    private var fetchedPhilosophers = [Philosopher]() {
         didSet {
-            philosophersSubject.send(fetchedPhilosopherss)
+            philosophersSubject.send(fetchedPhilosophers)
         }
     }
     
@@ -37,7 +37,7 @@ extension MainListViewModel: MainListViewModelRepresentable {
     func loadData() {
         let recievedPhilosopher = { (response: Response) -> Void in
             DispatchQueue.main.async { [unowned self] in
-                fetchedPhilosopherss.append(contentsOf: response.filosofos)
+                fetchedPhilosophers.append(contentsOf: response.Philosopher)
             }
         }
         
@@ -56,10 +56,11 @@ extension MainListViewModel: MainListViewModelRepresentable {
     }
     
     func goToAddNew() {
-        
+        let id = fetchedPhilosophers.count + 1
+        router?.process(route: .showAddNew(model: id))
     }
     
     func didTapItem(model: Philosopher) {
-        
+        router?.process(route: .showDetail(model: model))
     }
 }

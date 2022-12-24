@@ -8,5 +8,9 @@
 import Foundation
 
 struct Response: Codable {
-    let filosofos: [Philosopher]
+    let Philosopher: [Philosopher]
+    
+    private enum CodingKeys: String, CodingKey {
+        case Philosopher = "filosofos"
+    }
 }

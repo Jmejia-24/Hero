@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Hero" customModuleProvider="target">
+            <connections>
+                <outlet property="fraseLabel" destination="X9E-su-Igt" id="A9U-v0-Jy5"/>
+                <outlet property="imageView" destination="bMu-f2-ReM" id="Hnf-B1-51c"/>
+                <outlet property="nameLabel" destination="q9N-HF-KJv" id="d7a-B5-HrM"/>
+                <outlet property="paisLabel" destination="6Qe-aR-nHa" id="FWq-dm-qzA"/>
+                <outlet property="periodoLabel" destination="8eK-ie-hwh" id="DZL-L4-665"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKr-e2-EWB">
+                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="UIR-vj-D18">
+                            <rect key="frame" x="20" y="0.0" width="350" height="547.33333333333337"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gk-vC-3U3">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="250"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="socrates" translatesAutoresizingMaskIntoConstraints="NO" id="bMu-f2-ReM">
+                                            <rect key="frame" x="75" y="5" width="200" height="240"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="bi9-yA-ScR"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="bMu-f2-ReM" secondAttribute="bottom" constant="5" id="8Dh-yb-QB7"/>
+                                        <constraint firstAttribute="height" constant="250" id="MP6-D7-WTT"/>
+                                        <constraint firstItem="bMu-f2-ReM" firstAttribute="top" secondItem="7gk-vC-3U3" secondAttribute="top" constant="5" id="r5g-sr-jUO"/>
+                                        <constraint firstItem="bMu-f2-ReM" firstAttribute="centerX" secondItem="7gk-vC-3U3" secondAttribute="centerX" id="sSR-oi-oi0"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujq-HD-vAV">
+                                    <rect key="frame" x="0.0" y="267" width="350" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="Xat-fS-2B8"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sócrates" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9N-HF-KJv">
+                                    <rect key="frame" x="0.0" y="304" width="350" height="20.333333333333314"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Periodo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDN-ag-XLv">
+                                    <rect key="frame" x="0.0" y="341.33333333333331" width="350" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="r6J-Ak-8Zb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="470-ib., 399 a. C." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eK-ie-hwh">
+                                    <rect key="frame" x="0.0" y="378.33333333333331" width="350" height="20.333333333333314"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pais:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bv1-fD-AaK">
+                                    <rect key="frame" x="0.0" y="415.66666666666669" width="350" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="CdD-D3-2QI"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atenas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qe-aR-nHa">
+                                    <rect key="frame" x="0.0" y="452.66666666666669" width="350" height="20.333333333333314"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frase:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAK-Mh-4t7">
+                                    <rect key="frame" x="0.0" y="490" width="350" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="kjC-uB-mYa"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yo sólo sé que no sé nada" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9E-su-Igt">
+                                    <rect key="frame" x="0.0" y="527" width="350" height="20.333333333333371"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="HME-P1-OiG"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="UIR-vj-D18" firstAttribute="leading" secondItem="HME-P1-OiG" secondAttribute="leading" constant="20" id="LDc-z8-InJ"/>
+                        <constraint firstItem="HME-P1-OiG" firstAttribute="trailing" secondItem="UIR-vj-D18" secondAttribute="trailing" constant="20" id="O8a-Ll-aTw"/>
+                        <constraint firstItem="UIR-vj-D18" firstAttribute="top" secondItem="ggs-P7-19o" secondAttribute="top" id="Pk8-4o-CeN"/>
+                        <constraint firstAttribute="trailing" secondItem="UIR-vj-D18" secondAttribute="trailing" constant="20" id="elA-6m-8tM"/>
+                        <constraint firstItem="UIR-vj-D18" firstAttribute="bottom" secondItem="ggs-P7-19o" secondAttribute="bottom" id="pBm-T4-IHj"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="ggs-P7-19o"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="6fA-cK-Edj"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KKr-e2-EWB" secondAttribute="bottom" id="NM9-zQ-ghF"/>
+                <constraint firstItem="KKr-e2-EWB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PN0-0g-bVT"/>
+                <constraint firstItem="KKr-e2-EWB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="iAn-K5-5az"/>
+                <constraint firstItem="KKr-e2-EWB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="yqc-sW-Rbc"/>
+            </constraints>
+            <point key="canvasLocation" x="121.53846153846153" y="0.0"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="socrates" width="340" height="290"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

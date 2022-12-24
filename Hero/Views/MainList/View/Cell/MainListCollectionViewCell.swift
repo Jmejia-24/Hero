@@ -18,7 +18,7 @@ class MainListCollectionViewCell: UICollectionViewCell, NibLoadable {
     }
 
     func configCell(philosopher: Philosopher) {
-        nameLabel.text = philosopher.nombre
+        nameLabel.text = philosopher.name
         imageView.image = UIImage(named: "aristoteles")
     }
 }

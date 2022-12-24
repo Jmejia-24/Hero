@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewPhilosopherViewController" customModule="Hero" customModuleProvider="target">
+            <connections>
+                <outlet property="countryTextField" destination="xnh-Nt-9SG" id="ZRK-Sq-ayM"/>
+                <outlet property="nameTextField" destination="jnU-Av-pCm" id="bbe-f0-unv"/>
+                <outlet property="periodTextField" destination="NFv-tt-F69" id="tMj-oz-CbP"/>
+                <outlet property="saveButton" destination="hUb-lc-8Yl" id="5iJ-G1-ON8"/>
+                <outlet property="sentenceTextField" destination="YRT-Wf-jue" id="GvI-8q-neL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtp-EN-z9O">
+                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9o-KF-IWR">
+                            <rect key="frame" x="20" y="0.0" width="350" height="585"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cR-TH-mUj">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="250"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="socrates" translatesAutoresizingMaskIntoConstraints="NO" id="QOB-Wa-LlA">
+                                            <rect key="frame" x="75" y="5" width="200" height="240"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="DTW-FU-z5v"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="QOB-Wa-LlA" firstAttribute="top" secondItem="4cR-TH-mUj" secondAttribute="top" constant="5" id="0fV-Aw-NQl"/>
+                                        <constraint firstAttribute="height" constant="250" id="CtL-Gc-Fbs"/>
+                                        <constraint firstAttribute="bottom" secondItem="QOB-Wa-LlA" secondAttribute="bottom" constant="5" id="Kp4-gh-WQv"/>
+                                        <constraint firstItem="QOB-Wa-LlA" firstAttribute="centerX" secondItem="4cR-TH-mUj" secondAttribute="centerX" id="pbv-Rb-6xe"/>
+                                    </constraints>
+                                </view>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnU-Av-pCm">
+                                    <rect key="frame" x="0.0" y="267" width="350" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="D33-E7-GXT"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Periodo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFv-tt-F69">
+                                    <rect key="frame" x="0.0" y="334" width="350" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="AJZ-Id-hOj"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pais" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnh-Nt-9SG">
+                                    <rect key="frame" x="0.0" y="401" width="350" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="8zj-p2-byL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Frase célebre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YRT-Wf-jue">
+                                    <rect key="frame" x="0.0" y="468" width="350" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="ayb-sZ-CtM"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUb-lc-8Yl">
+                                    <rect key="frame" x="0.0" y="535" width="350" height="50"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="Sbu-JK-KD2"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Guardar"/>
+                                    <connections>
+                                        <action selector="didTapSaveButton:" destination="-1" eventType="touchUpInside" id="76b-4m-fvp"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="dxe-Qq-PB8"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="d9o-KF-IWR" firstAttribute="top" secondItem="Ys6-wN-AF8" secondAttribute="top" id="BpQ-YE-U1G"/>
+                        <constraint firstItem="dxe-Qq-PB8" firstAttribute="trailing" secondItem="d9o-KF-IWR" secondAttribute="trailing" constant="20" id="Rie-PF-EzJ"/>
+                        <constraint firstAttribute="trailing" secondItem="d9o-KF-IWR" secondAttribute="trailing" constant="20" id="Tcy-8H-yb5"/>
+                        <constraint firstItem="d9o-KF-IWR" firstAttribute="bottom" secondItem="Ys6-wN-AF8" secondAttribute="bottom" id="XJF-si-zM4"/>
+                        <constraint firstItem="d9o-KF-IWR" firstAttribute="leading" secondItem="dxe-Qq-PB8" secondAttribute="leading" constant="20" id="abk-90-QTI"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Ys6-wN-AF8"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="oq6-1m-6RX"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gtp-EN-z9O" secondAttribute="bottom" id="1w8-rI-8EG"/>
+                <constraint firstItem="gtp-EN-z9O" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8SB-xt-Vid"/>
+                <constraint firstItem="gtp-EN-z9O" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TSj-Ui-G8C"/>
+                <constraint firstItem="gtp-EN-z9O" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZFY-aK-Kis"/>
+            </constraints>
+            <point key="canvasLocation" x="44.615384615384613" y="-1.4218009478672986"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="socrates" width="340" height="290"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

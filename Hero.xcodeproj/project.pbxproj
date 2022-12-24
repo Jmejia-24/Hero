@@ -24,6 +24,14 @@
 		C81DED4D29565A850076E4F1 /* MainListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED4B29565A850076E4F1 /* MainListCollectionViewCell.swift */; };
 		C81DED4E29565A850076E4F1 /* MainListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C81DED4C29565A850076E4F1 /* MainListCollectionViewCell.xib */; };
 		C81DED5229565C760076E4F1 /* UICollectionView+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED5129565C760076E4F1 /* UICollectionView+ReusableView.swift */; };
+		C81DED64295669C70076E4F1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED62295669C70076E4F1 /* DetailViewController.swift */; };
+		C81DED65295669C70076E4F1 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C81DED63295669C70076E4F1 /* DetailViewController.xib */; };
+		C81DED672956708A0076E4F1 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED662956708A0076E4F1 /* DetailViewModel.swift */; };
+		C81DED692956718B0076E4F1 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED682956718B0076E4F1 /* DetailCoordinator.swift */; };
+		C81DED6E29567CAC0076E4F1 /* AddNewPhilosopherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED6D29567CAC0076E4F1 /* AddNewPhilosopherViewModel.swift */; };
+		C81DED7029567CBD0076E4F1 /* AddNewPhilosopherCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED6F29567CBD0076E4F1 /* AddNewPhilosopherCoordinator.swift */; };
+		C81DED7329567CE00076E4F1 /* AddNewPhilosopherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED7129567CE00076E4F1 /* AddNewPhilosopherViewController.swift */; };
+		C81DED7429567CE00076E4F1 /* AddNewPhilosopherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C81DED7229567CE00076E4F1 /* AddNewPhilosopherViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +54,14 @@
 		C81DED4B29565A850076E4F1 /* MainListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C81DED4C29565A850076E4F1 /* MainListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainListCollectionViewCell.xib; sourceTree = "<group>"; };
 		C81DED5129565C760076E4F1 /* UICollectionView+ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableView.swift"; sourceTree = "<group>"; };
+		C81DED62295669C70076E4F1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C81DED63295669C70076E4F1 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		C81DED662956708A0076E4F1 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		C81DED682956718B0076E4F1 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		C81DED6D29567CAC0076E4F1 /* AddNewPhilosopherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPhilosopherViewModel.swift; sourceTree = "<group>"; };
+		C81DED6F29567CBD0076E4F1 /* AddNewPhilosopherCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPhilosopherCoordinator.swift; sourceTree = "<group>"; };
+		C81DED7129567CE00076E4F1 /* AddNewPhilosopherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPhilosopherViewController.swift; sourceTree = "<group>"; };
+		C81DED7229567CE00076E4F1 /* AddNewPhilosopherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewPhilosopherViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +148,8 @@
 		C81DED3829564FD90076E4F1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C81DED6A29567C740076E4F1 /* AddNewPhilosopher */,
+				C81DED5D2956698B0076E4F1 /* DetailView */,
 				C81DED2A29564E990076E4F1 /* MainList */,
 			);
 			path = Views;
@@ -178,6 +196,60 @@
 				C81DED5129565C760076E4F1 /* UICollectionView+ReusableView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C81DED5D2956698B0076E4F1 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				C81DED682956718B0076E4F1 /* DetailCoordinator.swift */,
+				C81DED5F2956699C0076E4F1 /* View */,
+				C81DED5E295669950076E4F1 /* ViewModel */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		C81DED5E295669950076E4F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C81DED662956708A0076E4F1 /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C81DED5F2956699C0076E4F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C81DED62295669C70076E4F1 /* DetailViewController.swift */,
+				C81DED63295669C70076E4F1 /* DetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C81DED6A29567C740076E4F1 /* AddNewPhilosopher */ = {
+			isa = PBXGroup;
+			children = (
+				C81DED6F29567CBD0076E4F1 /* AddNewPhilosopherCoordinator.swift */,
+				C81DED6C29567C9D0076E4F1 /* View */,
+				C81DED6B29567C960076E4F1 /* ViewModel */,
+			);
+			path = AddNewPhilosopher;
+			sourceTree = "<group>";
+		};
+		C81DED6B29567C960076E4F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C81DED6D29567CAC0076E4F1 /* AddNewPhilosopherViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C81DED6C29567C9D0076E4F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C81DED7129567CE00076E4F1 /* AddNewPhilosopherViewController.swift */,
+				C81DED7229567CE00076E4F1 /* AddNewPhilosopherViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +317,8 @@
 				C81DED2329564ACE0076E4F1 /* LaunchScreen.storyboard in Resources */,
 				C81DED2029564ACE0076E4F1 /* Assets.xcassets in Resources */,
 				C81DED4E29565A850076E4F1 /* MainListCollectionViewCell.xib in Resources */,
+				C81DED7429567CE00076E4F1 /* AddNewPhilosopherViewController.xib in Resources */,
+				C81DED65295669C70076E4F1 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C81DED6E29567CAC0076E4F1 /* AddNewPhilosopherViewModel.swift in Sources */,
 				C81DED3B29564FF90076E4F1 /* Router.swift in Sources */,
 				C81DED1B29564ACD0076E4F1 /* MainListViewController.swift in Sources */,
 				C81DED2F29564F460076E4F1 /* Response.swift in Sources */,
@@ -267,8 +342,13 @@
 				C81DED3729564FC60076E4F1 /* App.swift in Sources */,
 				C81DED3329564F950076E4F1 /* MainListViewModel.swift in Sources */,
 				C81DED3D295650110076E4F1 /* Coordinator.swift in Sources */,
+				C81DED7029567CBD0076E4F1 /* AddNewPhilosopherCoordinator.swift in Sources */,
+				C81DED692956718B0076E4F1 /* DetailCoordinator.swift in Sources */,
+				C81DED64295669C70076E4F1 /* DetailViewController.swift in Sources */,
 				C81DED3F2956518B0076E4F1 /* MainListCoordinator.swift in Sources */,
 				C81DED4D29565A850076E4F1 /* MainListCollectionViewCell.swift in Sources */,
+				C81DED672956708A0076E4F1 /* DetailViewModel.swift in Sources */,
+				C81DED7329567CE00076E4F1 /* AddNewPhilosopherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

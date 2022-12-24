@@ -64,7 +64,7 @@ final class MainListViewController: UICollectionViewController {
     
     private func setBarItem() {
         let addButtonItem = UIBarButtonItem(title: "Agregar", primaryAction: UIAction { [unowned self] _ in
-            
+            viewModel.goToAddNew()
         })
         
         navigationItem.rightBarButtonItem = addButtonItem
