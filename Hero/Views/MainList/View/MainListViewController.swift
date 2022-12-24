@@ -31,26 +31,6 @@ final class MainListViewController: UICollectionViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    static private func generateLayout() -> UICollectionViewLayout {
-        let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-            
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                  heightDimension: .fractionalHeight(1.0))
-            
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            item.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12)
-            
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                   heightDimension: .absolute(200))
-            
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
-            
-            let section = NSCollectionLayoutSection(group: group)
-            return section
-        }
-        return layout
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -79,7 +59,6 @@ final class MainListViewController: UICollectionViewController {
         collectionView.showsVerticalScrollIndicator = false
         setBarItem()
         applySnapshot(items: [])
-        viewModel.getPhilosophers()
     }
     
     private lazy var dataSource: DataSource = {
@@ -104,11 +83,6 @@ final class MainListViewController: UICollectionViewController {
     }
 }
 
-protocol MainViewModelViewDelegate {
-    func refreshScreen(items: [Philosopher])
-    func showError(errorMessage: String)
-}
-
 extension MainListViewController: MainViewModelViewDelegate {
     func refreshScreen(items: [Philosopher]) {
         DispatchQueue.main.async { [unowned self] in
@@ -116,7 +90,29 @@ extension MainListViewController: MainViewModelViewDelegate {
         }
     }
     
-    func showError(errorMessage: String) {
-        presentAlert(with: errorMessage)
+    func showError() {
+        presentAlert(with: "Ocurrio un error al leer los datos, intentelo mas tarde")
+    }
+}
+
+extension MainListViewController {
+    static private func generateLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                  heightDimension: .fractionalHeight(1.0))
+            
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12)
+            
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                   heightDimension: .absolute(200))
+            
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
+            
+            let section = NSCollectionLayoutSection(group: group)
+            return section
+        }
+        return layout
     }
 }

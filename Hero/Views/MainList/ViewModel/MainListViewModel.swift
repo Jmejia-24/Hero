@@ -8,6 +8,11 @@
 import UIKit
 import Combine
 
+protocol MainViewModelViewDelegate {
+    func refreshScreen(items: [Philosopher])
+    func showError()
+}
+
 protocol MainListViewModelRepresentable {
     func getPhilosophers()
     func didTapItem(model: Philosopher)
@@ -44,7 +49,7 @@ extension MainListViewModel: MainListViewModelRepresentable {
                 fetchedPhilosophers = philosophers
                 delegate?.refreshScreen(items: philosophers)
             case .failure:
-                delegate?.showError(errorMessage: "Ocurrio un error al leer los datos, intentelo mas tarde")
+                delegate?.showError()
             }
         }
     }
@@ -53,11 +58,27 @@ extension MainListViewModel: MainListViewModelRepresentable {
         let recievedPhilosopher = { (response: Response) -> Void in
             DispatchQueue.main.async { [unowned self] in
                 services.saveDataOf(philosophers: response.Philosopher)
+                if UserDefaultsManager.isFirstLaunch {
+                    delegate?.refreshScreen(items: response.Philosopher)
+                    UserDefaultsManager.isFirstLaunch = false
+                }
+            }
+        }
+        
+        let completion = { [unowned self] (completion: Subscribers.Completion<Failure>) -> Void in
+            switch  completion {
+            case .finished:
+                break
+            case .failure:
+                if !fetchedPhilosophers.isEmpty {
+                    delegate?.showError()
+                }
+                break
             }
         }
         
         store.getPhilosophers()
-            .sink(receiveCompletion: { _ in }, receiveValue: recievedPhilosopher)
+            .sink(receiveCompletion: completion, receiveValue: recievedPhilosopher)
             .store(in: &cancellables)
     }
     

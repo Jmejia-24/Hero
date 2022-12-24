@@ -11,6 +11,7 @@
 		C801F4F229576A8E00224647 /* PhilosopherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C801F4F129576A8E00224647 /* PhilosopherObject.swift */; };
 		C801F4F429576C1000224647 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = C801F4F329576C1000224647 /* Services.swift */; };
 		C801F4F62957746100224647 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C801F4F52957746100224647 /* ImagePicker.swift */; };
+		C801F4F829578B5000224647 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C801F4F729578B5000224647 /* UserDefaultsManager.swift */; };
 		C81DED1729564ACD0076E4F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED1629564ACD0076E4F1 /* AppDelegate.swift */; };
 		C81DED1B29564ACD0076E4F1 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DED1A29564ACD0076E4F1 /* MainListViewController.swift */; };
 		C81DED2029564ACE0076E4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81DED1F29564ACE0076E4F1 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		C801F4F129576A8E00224647 /* PhilosopherObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilosopherObject.swift; sourceTree = "<group>"; };
 		C801F4F329576C1000224647 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		C801F4F52957746100224647 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C801F4F729578B5000224647 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C81DED1329564ACD0076E4F1 /* Hero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81DED1629564ACD0076E4F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C81DED1A29564ACD0076E4F1 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			children = (
 				C81DED5029565C5D0076E4F1 /* Extensions */,
 				C801F4F52957746100224647 /* ImagePicker.swift */,
+				C801F4F729578B5000224647 /* UserDefaultsManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				C81DED2F29564F460076E4F1 /* Response.swift in Sources */,
 				C81DED3129564F500076E4F1 /* Philosopher.swift in Sources */,
 				C81DED44295654E00076E4F1 /* Failure.swift in Sources */,
+				C801F4F829578B5000224647 /* UserDefaultsManager.swift in Sources */,
 				C81DED42295653080076E4F1 /* APIManager.swift in Sources */,
 				C81DED5229565C760076E4F1 /* UICollectionView+ReusableView.swift in Sources */,
 				C81DED1729564ACD0076E4F1 /* AppDelegate.swift in Sources */,
