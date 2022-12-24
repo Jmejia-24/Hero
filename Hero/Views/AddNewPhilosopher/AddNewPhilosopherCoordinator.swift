@@ -18,7 +18,7 @@ final class AddNewPhilosopherCoordinator<R: AppRouter> {
     }
     
     private lazy var primaryViewController: UIViewController = {
-        let viewModel = AddNewPhilosopherViewModel<R>(model: self.model)
+        let viewModel = AddNewPhilosopherViewModel<R>(model: self.model, services: Services(storage: PhilosopherManager()))
         viewModel.router = router
         let viewController = AddNewPhilosopherViewController(viewModel: viewModel)
         return viewController

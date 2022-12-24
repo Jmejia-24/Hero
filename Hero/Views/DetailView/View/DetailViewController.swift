@@ -32,10 +32,20 @@ class DetailViewController: UIViewController {
     }
     
     private func setUI() {
-        imageView.image = UIImage(named: viewModel.philosopher.image ?? "")
         nameLabel.text = viewModel.philosopher.name
         periodoLabel.text = viewModel.philosopher.period
         paisLabel.text = viewModel.philosopher.country
         fraseLabel.text = viewModel.philosopher.sentence
+        
+        if let image = viewModel.philosopher.image, !image.isEmpty, let uiImage = UIImage(named: image)  {
+            imageView.image = uiImage
+            return
+        } else if let imageData = viewModel.philosopher.imageDat {
+            imageView.image = UIImage(data: imageData)
+            return
+        } else {
+            imageView.image = UIImage(named: "placeholder")
+            return
+        }
     }
 }

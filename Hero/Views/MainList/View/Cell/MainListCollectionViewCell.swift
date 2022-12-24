@@ -14,11 +14,20 @@ class MainListCollectionViewCell: UICollectionViewCell, NibLoadable {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func configCell(philosopher: Philosopher) {
         nameLabel.text = philosopher.name
-        imageView.image = UIImage(named: philosopher.image ?? "")
+        
+        if let image = philosopher.image, !image.isEmpty, let uiImage = UIImage(named: image)  {
+            imageView.image = uiImage
+            return
+        } else if let imageData = philosopher.imageDat {
+            imageView.image = UIImage(data: imageData)
+            return
+        } else {
+            imageView.image = UIImage(named: "placeholder")
+            return
+        }
     }
 }

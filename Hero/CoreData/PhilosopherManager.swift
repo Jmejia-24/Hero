@@ -71,7 +71,7 @@ extension PhilosopherManager: Storage {
         }
         
         let philosopherEntity = PhilosopherEntity(context: mainContext)
-        
+        philosopherEntity.id = philosopher.id
         philosopherEntity.name = philosopher.name
         philosopherEntity.period = philosopher.period
         philosopherEntity.country = philosopher.country

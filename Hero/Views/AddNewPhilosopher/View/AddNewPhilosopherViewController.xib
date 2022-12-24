@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewPhilosopherViewController" customModule="Hero" customModuleProvider="target">
             <connections>
                 <outlet property="countryTextField" destination="xnh-Nt-9SG" id="ZRK-Sq-ayM"/>
+                <outlet property="imageView" destination="QOB-Wa-LlA" id="qLD-qw-c3n"/>
                 <outlet property="nameTextField" destination="jnU-Av-pCm" id="bbe-f0-unv"/>
                 <outlet property="periodTextField" destination="NFv-tt-F69" id="tMj-oz-CbP"/>
                 <outlet property="saveButton" destination="hUb-lc-8Yl" id="5iJ-G1-ON8"/>
@@ -34,7 +35,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cR-TH-mUj">
                                     <rect key="frame" x="0.0" y="0.0" width="350" height="250"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="socrates" translatesAutoresizingMaskIntoConstraints="NO" id="QOB-Wa-LlA">
+                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="QOB-Wa-LlA">
                                             <rect key="frame" x="75" y="5" width="200" height="240"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="200" id="DTW-FU-z5v"/>
@@ -123,7 +124,7 @@
         </view>
     </objects>
     <resources>
-        <image name="socrates" width="340" height="290"/>
+        <image name="placeholder" width="1665" height="2048"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

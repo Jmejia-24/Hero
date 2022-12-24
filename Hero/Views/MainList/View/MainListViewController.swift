@@ -56,8 +56,9 @@ final class MainListViewController: UICollectionViewController {
         setUI()
     }
     
-    override func loadView() {
-        super.loadView()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.getPhilosophers()
     }
     
     // MARK: - Private methods
